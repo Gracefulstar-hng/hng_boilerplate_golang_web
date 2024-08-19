@@ -1,15 +1,12 @@
-name: Test Self-Hosted Runners
-
+name: Test Self-Hosted Runner
 on: [push]
-
 jobs:
-  build:
+  test:
     runs-on: self-hosted
     steps:
-    - name: Check out code
-      uses: actions/checkout@v2
-    - name: Run a one-liner script
-      run: echo "This is running on a self-hosted runner!"
+    - uses: actions/checkout@v2
+    - name: Run a test
+      run: echo "Hello from self-hosted runner in Gitpod!"
 
 
 # name: Actions Runner Controller Demo
